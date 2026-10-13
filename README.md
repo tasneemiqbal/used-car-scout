@@ -5,8 +5,13 @@ See what a used car will really cost before you buy it. Paste a Facebook Marketp
 Built for **SheBuilds by Lovable** (Oct 15–17, 2026).
 
 - **Product spec:** [product-spec.md](product-spec.md) (scope, pages, Scout, data sources, AI instructions, security, build plan)
-- **Design:** [Figma file](https://www.figma.com/design/YARHxc2pgKDcBJQlgVcl4V)
+- **Design system (for Lovable):** [design/design-system.md](design/design-system.md), with screen images in [design/screens/](design/screens/) and [design/system/](design/system/)
+- **Design source:** [Figma file](https://www.figma.com/design/YARHxc2pgKDcBJQlgVcl4V)
 - **Brand assets:** [assets/](assets/)
+
+## Hackathon rules
+
+This repo holds only plans, design references and brand assets prepared before kickoff. No app code is written before Oct 15; the app is built from scratch in a new Lovable project.
 
 ## Stack
 
