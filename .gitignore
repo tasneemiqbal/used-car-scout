@@ -1,0 +1,16 @@
+# Secrets — never commit keys
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Dependencies / builds
+node_modules/
+dist/
+build/
