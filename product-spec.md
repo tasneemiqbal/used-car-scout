@@ -8,7 +8,7 @@ Used Car Scout shows what a used car will really cost before you buy it. Paste a
 
 **Who it's for:** young women and newcomers to the US buying their first used car ($5k–$15k) from a private seller. They have no trusted "car guy," worry about being talked down to or scammed, can't afford a $3,000 repair in year one, and often can't afford a mechanic's inspection either.
 
-**Hackathon:** SheBuilds by Lovable, Oct 15–17, 2026. About 30 hours of build time (10 hrs/day).
+**Hackathon:** SheBuilds by Lovable, Oct 15–17, 2026. About 30 hours of build time (10 hrs/day). **Submission deadline: Oct 17, 11:59 PM PT.** The Lovable project must be **new, created on Thursday Oct 15**; before that, only plans, design references and chat-mode questions.
 
 **Product principles**
 
@@ -286,6 +286,27 @@ No separate job. The chosen language is passed to every job. Car names, numbers 
 | 9 | **Server fetching attacker URLs (SSRF)** | Backend functions only call an allowlist of hosts: `api.nhtsa.gov`, `vpic.nhtsa.dot.gov`, `www.fueleconomy.gov`. We never fetch a URL a user typed. |
 | 10 | **Contact form spam** | Honeypot field + rate limit; the email field is validated; messages are only readable by the founder. |
 
+### How we use Lovable's security tools
+
+From Lovable's security session (Oct 14). Lovable's five pillars, and how they apply to us:
+
+| Lovable pillar | What it means for Used Car Scout |
+| --- | --- |
+| **1. Each person sees only their own data** | We have no accounts, so the risk is a visitor reading *everyone's* reports. The browser gets no direct access to any table; reports load one at a time by random ID through `get-report`. |
+| **2. Secrets stay hidden** | Lovable AI and Lovable Cloud are built in, and the NHTSA and fueleconomy.gov APIs need no key, so we expect **zero secrets to manage**. If one is ever needed, paste it only into Lovable's secrets pop-up, never into chat or code. If a key leaks, replace (rotate) it immediately. |
+| **3. Deep security scan before publishing** | Run the **deep scan** and **Try to Fix All** before every important publish (both are free and use no credits). No critical finding may be open at submission. |
+| **4. Business logic lives in the backend** | Report generation, AI instructions, validation, rate limits and the host allowlist all live in backend functions. Assume anything in the page is visible to anyone. |
+| **5. Prove it's safe** | Mention in the submission that the deep scan passed with no open critical findings. A full pen test (Aikido integration) is a post-hackathon option. |
+
+**Habits**
+- **Ask before building.** Use Lovable **chat mode** (free, no credits) to ask: "Who can see what in my app? Show it as a table." Check it matches this section.
+- **Describe access rules in plain words early** (e.g. "visitors can only open a report if they have its link; nobody can list reports"). Fixing access rules late is expensive.
+- **Test as an outsider:** in a private browser window, try to open a made-up report ID, and ask Lovable whether a visitor could list the `reports` table. Both must fail.
+- **Check after every big feature:** re-run the scan; ask Lovable to sanitize every place a user can type or upload.
+- **Accounts:** we have none, which removes a whole class of risk (passwords, account takeover). If accounts are ever added, use social login (Google/Apple), not username and password, and check admin rights in the backend.
+- **Know what we store** (report contents, contact messages) so we can delete it on request.
+- Lovable's own certifications (SOC 2, GDPR) don't transfer to our app; we inherit their security controls, not their certificates.
+
 ### Good to have (after the core works)
 
 - Reports expire after 30 days (delete old rows with a scheduled job).
@@ -316,13 +337,13 @@ Day 1 gets the core working end to end, Day 2 completes the report and Scout, an
 
 ### Day 1 (Oct 15): paste to known problems
 
-- [ ] Hrs 0–1: create the project, header, Home page, publish to get a live link; connect GitHub
+- [ ] Hrs 0–1: create a **brand-new** Lovable project (required), share the design system, header, Home page, publish to get a live link; connect GitHub. In plain words, tell Lovable the access rules: "no accounts; visitors can only open a report by its link; nobody can list reports"
 - [ ] Hrs 1–3: `extract-listing` + Confirm page (text and screenshot), input limits, prompt-injection guard
 - [ ] Hrs 3–6: `get-vehicle-data`: complaints, model-year comparison, recalls, name matching, host allowlist
 - [ ] Hrs 6–8: `generate-report` + `get-report` + Report highlights (verdict, What matters), RLS on `reports`
-- [ ] Hrs 8–10: Checking page, run all 3 demo listings
+- [ ] Hrs 8–10: Checking page, run all 3 demo listings; run the security scan + Try to Fix All
 
-**End-of-day check:** paste a listing → see real problems and the verdict. **If behind:** keep going on this before starting Day 2.
+**End-of-day check:** paste a listing → see real problems and the verdict; no critical scan findings. **If behind:** keep going on this before starting Day 2.
 
 ### Day 2 (Oct 16): full report, Scout, Viewing mode
 
@@ -338,9 +359,10 @@ Day 1 gets the core working end to end, Day 2 completes the report and Scout, an
 
 - [ ] Hrs 0–2: share image, red flags + safe meetup polish
 - [ ] Hrs 2–4: Practice with Scout (stretch) or language picker (English + Spanish)
-- [ ] Hrs 4–7: design polish, phone layout, error states, privacy page
+- [ ] Hrs 4–6: design polish, phone layout, error states, privacy page
+- [ ] Hrs 6–7: **deep security scan + Try to Fix All**, outsider test in a private window, final publish
 - [ ] Hrs 7–8: record a backup demo video
-- [ ] Hrs 8–10: submission write-up, rehearse 3+ times. **No new code after hour 8.**
+- [ ] Hrs 8–10: submission write-up (mention the clean security scan), rehearse 3+ times. **No new code after hour 8. Submit well before 11:59 PM PT.**
 
 ### Demo script (2 minutes)
 
