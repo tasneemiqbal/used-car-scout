@@ -17,8 +17,8 @@ This repo holds the plans, design references and brand assets prepared before ki
 ## What is in the repo
 
 - `src/` the app: TanStack Start (React 19), Tailwind CSS v4, route files, the checker, the report and Scout chat
-- `supabase/migrations/` database migrations applied to the Lovable Cloud backend
-- `drizzle/migrations/` the same migration history kept with the project
+- `drizzle/migrations/` database migrations applied to the Lovable Cloud backend
+- `supabase/config.toml` backend configuration kept with the project
 - `judge-testing.md` how to test the app without an account
 - `roadmap.md` the task list used during the build
 - `AGENTS.md` build rules kept with the project
