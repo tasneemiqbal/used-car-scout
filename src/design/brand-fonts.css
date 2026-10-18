@@ -1,0 +1,64 @@
+/* Brand font files only; no screen or component styles. */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/__l5e/assets-v1/6181804a-f3c7-4f59-b976-30557a6e8b88/brand-font-0.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/__l5e/assets-v1/cb0be4d0-94ab-478f-b3ec-446306625204/brand-font-1.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/__l5e/assets-v1/272c24eb-6ad0-4b71-bce3-8334faf5e977/brand-font-2.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/__l5e/assets-v1/6da3da88-b295-4a6b-835d-77ad14121fc9/brand-font-3.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/__l5e/assets-v1/a12f3803-d0a0-4844-9217-e5bc824f3c99/brand-font-4.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/__l5e/assets-v1/73eb389b-24c7-422e-ace6-767922e6a7a9/brand-font-5.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/__l5e/assets-v1/7a9bc3be-5a19-4cdd-b95c-a0a245877df3/brand-font-6.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/__l5e/assets-v1/8788dab8-d9ad-4801-b114-90c7e4754e9c/brand-font-7.ttf) format('truetype');
+}

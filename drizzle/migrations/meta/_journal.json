@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1792087351628,
+      "tag": "0000_scout_secure_report_foundation",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792087854561,
+      "tag": "0001_scout_atomic_usage_limits",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792091099361,
+      "tag": "0002_create_contact_messages",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+/* Original brand colors only; intentionally not applied to any app screen. */
+:root {
+  --brand-primary: oklch(0.432114 0.069097 194.8998); /* #0F5C5C */
+  --brand-primary-tint: oklch(0.944861 0.014032 185.9477); /* #E3F0EE */
+  --brand-accent: oklch(0.668786 0.165665 34.5262); /* #E8684A */
+  --brand-accent-tint: oklch(0.947559 0.022336 38.3343); /* #FCE9E3 */
+  --brand-background: oklch(0.977834 0.007902 73.7449); /* #FBF7F2 */
+  --brand-surface: oklch(1.000000 0.000000 0.0000); /* #FFFFFF */
+  --brand-border: oklch(0.909201 0.012622 75.3608); /* #E6E0D8 */
+  --brand-foreground: oklch(0.276441 0.016890 222.0890); /* #1F2A2E */
+  --brand-muted-foreground: oklch(0.516265 0.020870 218.5913); /* #5B6B70 */
+  --brand-good: oklch(0.528545 0.106141 154.6029); /* #2E7D4F */
+  --brand-good-tint: oklch(0.954502 0.018186 161.1160); /* #E6F4EC */
+  --brand-caution: oklch(0.590904 0.132452 65.1168); /* #B26A00 */
+  --brand-caution-tint: oklch(0.967178 0.026039 82.3867); /* #FDF3E1 */
+  --brand-risk: oklch(0.543346 0.174006 29.6967); /* #C0392B */
+  --brand-risk-tint: oklch(0.947810 0.019864 25.1725); /* #FBE9E7 */
+}
